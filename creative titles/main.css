@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+div {
+   margin: 30px;
+}
+div > span {
+  font-weight: bold;
+  font-size: 30px;
+}
+div > h3 {
+    width: 300px;
+    padding: 15px 0;
+}
+div .blue {
+   color: blue;
+}
+div .blue, div .red, div .green, div .orange {
+     position: relative;
+ }
+div .blue::before,
+div .red::before,
+div .green::before,
+div .orange::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+}
+div .blue::before {
+    background-image: linear-gradient(to right,blue 50%, #ccc 50%);
+}
+div .blue::after,
+div .red::after,
+div .green::after,
+div .orange::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    border-radius: 50%;
+}
+div .blue::after {
+    background-color: blue;
+}
+div .red {
+    color: red;
+}
+div .red::before {
+    background-image: linear-gradient(to right,red 50%, #ccc 50%);
+}
+div .red::after {
+    background-color: red;
+}
+div .green {
+    color: green;
+}
+div .green::before {
+    background-image: linear-gradient(to right,green 50%, #ccc 50%);
+}
+div .green::after {
+    background-color: green;
+}
+div .orange {
+    color: orange;
+}
+div .orange::before {
+    background-image: linear-gradient(to right,orange 50%, #ccc 50%);
+}
+div .orange::after {
+    background-color: orange;
+}
