@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.section {
+    margin: 5px;
+    background-color: white;
+}
+.section h3 {
+    margin: 0 0 20px;
+    background-color: #009688;
+    width: fit-content;
+    color: white;
+    padding: 10px 15px;
+}
+.section .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+    margin: 0 30px;
+}
+.section .content .box  {
+    border: 8px solid #ddd;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.section .content .box.sold::before {
+    content: "Sale!";
+    position: absolute;
+    background-color: red;
+    z-index: 5;
+    color: white;
+    padding: 15px 5px;
+    border-radius: 50%;
+    left: 0;
+}
+
+.section .content .box .image {
+    overflow: hidden;
+    position: relative;
+}
+.section .content .box .image::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255 255 255 /20%);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: 2;
+}
+.section .content .box:hover .image::before {
+    animation: flashing 0.7s;
+}
+.section .content .box .image img  {
+    max-width: 100%;
+    transition: 0.6s;
+}
+.section .content .box:hover img {
+    transform: scale(1.1) rotate(6deg);
+}
+.section .content .box p  {
+    margin: 10px;
+    color: #999;
+}
+.section .content .box span:not(.sale)  {
+    font-weight: bold;
+    color: #417f9d;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+}
+.section .content .box span:not(.sale):before,
+.section .content .box span:not(.sale):after {
+    content: "";
+    width: 75px;
+    height: 2px;
+    background-color: #ddd;
+    position: absolute;
+}
+.section .content .box span:not(.sale)::before {
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.section .content .box span:not(.sale)::after {
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.section .content .box .sale {
+    display: inline-block;
+    color: red;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 20px;
+}
+.section .content .box .sale::before,
+.section .content .box .sale::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: #ddd;
+    position: absolute;
+}
+.section .content .box .sale::before {
+    left: -50%;
+    top: 50%;
+    transform: translateY(-50%)
+}
+.section .content .box .sale::after {
+    right: -50%;
+    top: 50%;
+    transform: translateY(-50%)
+}
+.section .content .box .sale p {
+    display: inline;
+    text-decoration: line-through;
+}
+@keyframes flashing {
+    0%,
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 200%;
+        height: 200%;
+    }
+}
