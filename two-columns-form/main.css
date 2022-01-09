@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+form {
+    margin: 20px;
+    background-color: #f6f6f6;
+}
+form .content {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+form .content label {
+    display: block;
+    margin: 5px;
+    font-size: 18px
+}
+form .content .box1 {
+    flex-basis: 50%;
+}
+form .content .box2 {
+    flex-basis: 50%;
+}
+form .content .box1 label {
+    position: relative;
+}
+form .content .box1 label::after {
+    content: "*";
+    position: absolute;
+    color: red;
+    top: 50%;
+    transform: translateY(-50%);
+}
+form .content input:not([type="submit"]),form .content textarea {
+    display: block;
+    width: 95%;
+    margin: 5px;
+    padding: 10px 10px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 6px;
+    caret-color: cornflowerblue;
+}
+form .content input:not([type="submit"]),form .content textarea:focus {
+    outline: none;
+}
+form .content input::placeholder {
+    transition: opacity 0.6s;
+}
+form .content input:focus::placeholder {
+    opacity: 0;
+}
+form .content textarea {
+    height: 100px;
+}
+form [type="submit"] {
+    width: 97%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 9px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+form [type="submit"]:hover {
+    background-color: #45a049;
+}
