@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    margin: 5px;
+    background-color: #f6f6f6;
+    padding: 10px 20px;
+}
+.container .title {
+    margin: 0 20px 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.container .title h3 {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    position: relative;
+    margin-right: -15px;
+}
+.container .title h3::before {
+    content: "";
+    width: 40px;
+    height: 42px;
+    background-color: #f6f6f6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    clip-path: polygon(100% 0%, 25% 50%, 100% 100%);
+}
+.container .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.container .content .basic {
+    background-color: white;
+    flex-basis: 50%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.container .content .basic h3 {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+.container .content .basic ul li {
+    margin: 10px 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.container .content .basic ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.container .content .basic ul li::before,
+.container .content .basic ul .wrong::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    left: -25px;
+    top: 0%;
+}
+.container .content .basic ul li::before  {
+    background-color: #009688;
+}
+.container .content .basic ul .wrong::before {
+     background-color: #f44336;
+}
+.container .content .prof {
+    background-color: white;
+    flex-basis: 50%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.container .content .prof h3 {
+    background-color: #03a9f4;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+.container .content .prof ul li {
+    margin: 10px 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.container .content .prof ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.container .content .prof ul li::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    left: -25px;
+    top: 0%;
+    background-color: #009688;
+}
+.container .content .prof ul .mark {
+    display: flex;
+    justify-content: space-between;
+}
+.container .content .prof ul li span {
+    background-color: #aaa;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center
+}
+@media (max-width: 991px) {
+    .container .content .prof ul li span {
+        display: none;
+    }
+    
+}
+
