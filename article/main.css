@@ -1,0 +1,130 @@
+* {
+box-sizing: border-box;
+font-family: sans-serif;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+.page {
+  background-color: #ddd;
+  margin: 5px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(15,1fr);
+  gap: 10px 10px;
+}
+@media (max-width: 767px) {
+    .page {
+        grid-template-columns: 1fr;
+    }
+}
+.one {
+ grid-column: span 6;
+ grid-row: span 4;
+ background-color: white;
+ padding: 10px;
+ position: relative;
+}
+
+.two {
+  grid-column: span 3;
+  grid-row: span 4;
+  background-color: white;
+  padding: 10px;
+  position: relative;
+}
+.three {
+  grid-column: span 3;
+  grid-row: span 12;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: relative;
+}
+.four {
+  grid-column: span 3;
+  grid-row: span 8;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  position: relative;
+}
+.five {
+  grid-column: span 6;
+  grid-row: span 4;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: relative;
+}
+
+.six {
+  grid-column: span 6;
+  grid-row: span 4;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  position: relative;
+} 
+.seven {
+  grid-column: span 3;
+  grid-row: span 4;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  position: relative;
+}
+.eight {
+  grid-column: span 3;
+  grid-row: span 4;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: relative;
+} 
+.nine  {
+  grid-column: span 3;
+  grid-row: span 4;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  position: relative;
+}
+.ten {
+  grid-column: span 3;
+  grid-row: span 4;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  position: relative;
+}
+@media (max-width: 767px) {
+    .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten {
+        grid-column: auto;
+    }
+}
+.one h4,.two h4,.three h4,.four h4,.five h4,.six h4,.seven h4,.eight h4,.nine h4,.ten h4 {
+  color: silver;
+ }
+ .one .p1,.two .p1,.three .p1,.four .p1,.five .p1,.six .p1,.seven .p1,.eight .p1,.nine .p1,.ten .p1 {
+  font-weight: bold;
+ }
+ .one::before,.two::before,.three::before,.four::before,.five::before,.six::before,.seven::before,.eight::before,.nine::before,.ten::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: coral;
+  bottom: 0;
+  left: 0;
+}
+.one::after,.two::after,.three::after,.four::after,.five::after,.six::after,.seven::after,.eight::after,.nine::after,.ten::after {
+  content: '"';
+  position: absolute;
+  font-size: 50px;
+  color: gray;
+  bottom: -25px;
+  right: 10px;
+  font-style: italic;
+}
