@@ -1,0 +1,119 @@
+.parent {
+  background-color: #ddd;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  padding: 0 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.el {
+  position: absolute;
+  font-size: 300px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.e {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ffb300;
+  top: 70px;
+  left: 38%;
+  animation-name: E-move;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+.l {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ffb300;
+  bottom: 32px;
+  right: 0;
+  opacity: 0;
+  animation-name: L-move;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 6s;
+}
+@keyframes E-move {
+ 0% {
+   top :70px;
+   left: 38%;
+ } 
+ 10% {
+   top: 70px;
+   left: 13%;
+ }
+ 20% {
+  top: 155px;
+  left: 13%;
+ }
+ 30% {
+  top: 155px;
+  left: 38%;
+ }
+ 40% {
+  top: 155px;
+  left: 13%;
+ }
+ 50% {
+  top: 245px;
+  left: 13%;
+ }
+ 60% {
+  top: 245px;
+  left: 38%;;
+ }
+ 70% {
+  top: 245px;
+  left: 13%;
+ }
+ 90% {
+  top: 70px;
+  left: 13%;
+ }
+ 100% {
+  top: 70px;
+  left: 38%;
+ }
+}
+@keyframes L-move {
+  0% {
+    opacity: 0.5;
+    bottom: 32px;
+    right: 0px;
+  }
+  5% {
+    opacity: 1;
+    bottom: 32px;
+    right: 0px;
+  }
+  35% {
+    bottom: 32px;
+    right: 105px;
+    opacity: 1;
+  }
+  95%{
+    bottom: 205px;
+    right: 105px;
+    opacity: 1;
+  }
+  99% {
+    bottom: 205px;
+    right: 105px;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 205px;
+    right: 105px;
+    opacity: 0;
+  }
+}
