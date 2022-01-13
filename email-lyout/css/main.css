@@ -1,0 +1,196 @@
+    * {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.page {
+    margin: 15px auto;
+}
+.page .header {
+    position: relative;
+    background-image: url(../image/kids-sustainability-activities-playing-outside-16x9-1.jpg);
+    background-size: cover;
+    height: 50vh;
+    z-index: -1;
+    border-radius: 6px;
+}
+.page .header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c84e2ed9;
+    z-index: -1;
+}
+.page .header .responsive {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #122333;
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border-radius: 6px;
+}
+.page .header .responsive h3 {
+    font-size: 50px;
+    width: 350px;
+    text-transform: capitalize;
+    margin: 0 15px;
+    position: relative;
+    padding-bottom: 15px;
+}
+.page .header .responsive h3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 3px;
+    background-color: #ed4c21;
+}
+.page .header .responsive ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+.page .header .responsive ul li {
+    margin: 30px 0;
+}
+.page .header .responsive ul li i {
+    margin-right: 10px;
+    color: #7db23d;
+}
+.page .header .responsive a {
+    text-decoration: none;
+    background-color: #ed4c21;
+    width: fit-content;
+    color: white;
+    margin: 30px;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 6px;
+}
+.page .header .text {
+    position: absolute;
+    bottom: -225px;
+    right: 20px;
+    width: 500px;
+    border: 1px solid #ed4c21;
+    padding: 20px 25px;
+}
+.page .header .text p {
+    line-height: 1.8;
+    font-size: 18px;
+    color: #333
+}
+.page .content {
+    margin: 300px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;  
+}
+.page .content .box {
+    background-color: #ddd;
+    margin: 10px 30px;
+    padding: 15px 50px
+}
+.page .content .box span {
+    font-weight: bold;
+    font-size: 25px;
+    color: #ed4c21;
+}
+.page .content .box h3 {
+    font-weight: normal;
+    font-size: 25px;
+}
+.page .content .box p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+.page .content .box a {
+    text-decoration: none;
+    font-size: 18px;
+    color:#ed4c21;
+    position: relative;
+}
+.page .content .box a::after {
+    content: "\f061";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    position: absolute;
+    font-size: 12px;
+    top: 55%;
+    transform: translateY(-45%);
+    right: -20px;
+}
+.page .footer {
+    background-image: url(../image/bg2.jpg);
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: -1;
+}
+.page .footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #26323bde;
+    z-index: -1;
+}
+.page .footer .article  {
+    flex-basis: 50%;
+}
+.page .footer .article h3 {
+    color: white;
+    margin: 20px 30px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    position: relative;
+}
+.page .footer .article h3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 3px;
+    background-color: #ed4c21;
+}
+.page .footer .article p {
+    color: white;
+    line-height: 1.8;
+    font-size: 18px;
+    margin: 0 30px;
+}
+.page .footer .article a {
+    text-decoration: none;
+    background-color: #ed4c21;
+    width: fit-content;
+    color: white;
+    margin: 20px;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 6px;
+    display: block;
+}
+.page .footer .image {
+    flex-basis: 50%;
+}
+.page .footer .image img {
+    width: 80%;
+    height: 80%;
+    border-radius: 6px;
+    margin-top: 30px;
+}
