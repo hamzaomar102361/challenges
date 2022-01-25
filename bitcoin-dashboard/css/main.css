@@ -24,7 +24,7 @@ ul {
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: 100px auto;
     grid-template-areas: "nav head head head head head head head head head" 
-                        "nav section section section aside aside aside aside aside aside";
+                        "nav section section section section aside aside aside aside aside";
     background-color: #fefefe;
 }
 .page header {
@@ -114,12 +114,12 @@ ul {
     color: white;
     margin-bottom: 30px;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     border-radius: 6px;
     transition: 0.6s;
 }
 .page nav ul li:hover {
-    background-color: blue;
+    background-color: #03a9f4;
 }
 .page nav ul li i {
     transition: 0.6s;
@@ -127,4 +127,103 @@ ul {
 .page nav ul li:hover i {
     opacity: 0.7;
 }
-
+.page section {
+    grid-area: section;
+}
+.page section p {
+    margin-left: 30px;
+    color: #999;
+    font-size: 18px;
+}
+.page section p span {
+    color: #2196f3;
+    font-weight: bold;
+    font-size: 22px;
+}
+.page section .content {
+    margin-left: 50px
+}
+.page section .content .links {
+    margin: 10px 10px;
+}
+.page section .content .links a {
+    text-decoration: none;
+    display: inline-block;
+    width: 49%;
+    transition: 0.6s;
+}
+.page section .content .links .buy {
+    background-color: #2196f3;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+.page section .content .links .buy:hover {
+    background-color: #2195f3c0;
+}
+.page section .content .links .sell {
+    background-color: white;
+    color: #2196f3;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight: bold;
+    border: 1px solid #f6f6f6;
+    border-radius: 6px;
+}
+.page section .content .links .sell:hover {
+    background-color: #f6f6f6;
+}
+.page section .content .box {
+    margin: 20px 0;
+}
+.page section .content .box h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.page section .content .box div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f6fe;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+.page section .content .box div span {
+    color: #777;
+}
+.page section .content .box div span i {
+    margin-right: 30px;
+    font-size: 12px;
+}
+.page section .content .box:last-child div span {
+    color: #ccc;
+}
+.page section .sum {
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.page section .sum span:first-child{
+    color: #777;
+    text-align: start;
+}
+.page section .button {
+    display: block;
+    margin: 10px 0 0 50px;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: #10d876;
+    border-radius: 6px;
+}
+.page section .foot {
+    margin: 50px 0 0 50px;
+    font-size: 12px;
+}
