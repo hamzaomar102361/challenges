@@ -1,0 +1,130 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    font-size: 15px;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 25px 15px;
+}
+.container .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.container .text p {
+    text-align: center;
+}
+@media (min-width: 992px) {
+    .container .text {
+        margin: 0 auto 50px;
+        text-align: center;
+        width: 500px;
+    }
+}
+
+.container .text h2:first-child {
+    font-weight: normal;
+    font-size: 22px;
+    color: #85858e;
+}
+.container .text h2:last-of-type  {
+    font-size: 23px;
+    color: #434552;
+}
+.container .text p {
+    color: #85858e;
+    font-size: 14px
+}
+.container .sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container .sections .box {
+    width: 300px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px 15px;
+    box-shadow: 1px 5px 15px -4px hsl(229deg 6% 66%);
+}
+.container .sections .cyan {
+    border-top: 3px solid hsl(180, 62%, 55%); 
+}
+.container .sections .red {
+    border-top: 3px solid hsl(0, 78%, 62%);;
+}
+.container .sections .orange {
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+.container .sections .blue {
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+.container .sections .box h3 {
+    color: #434552;
+    font-size: 18px;
+    margin: 0;
+}
+.container .sections .box p {
+    color: #cdcdce;
+    font-size: 12px;
+}
+.container .sections .box img {
+    margin-top: 20px;
+    margin-left: 185px;
+}
+
+@media (min-width: 992px) {
+    .container .sections {
+        position: relative;
+        height: 70vh;
+    }
+    .container .sections .box {
+        width: 300px;
+        background-color: white;
+        border-radius: 4px;
+        padding: 20px 15px;
+        position: absolute;
+        box-shadow: 1px 5px 15px -4px hsl(229deg 6% 66%);
+    }
+    .container .sections .cyan {
+        border-top: 3px solid hsl(180, 62%, 55%); 
+        top: 50%;
+        left: 50%;
+        transform: translate(calc(-150% - 30px), -50%);
+    }
+    .container .sections .red {
+        border-top: 3px solid hsl(0, 78%, 62%);;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .container .sections .orange {
+        border-top: 3px solid hsl(34, 97%, 64%);
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .container .sections .blue {
+        border-top: 3px solid hsl(212, 86%, 64%);
+        right: 50%;
+        top: 50%;
+        transform: translate(calc(150% + 30px),-50%);
+    }
+}
+
+
+
