@@ -115,7 +115,6 @@ html {
     .container .sections .orange {
         border-top: 3px solid hsl(34, 97%, 64%);
         bottom: 0;
-        margin-bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
     }
